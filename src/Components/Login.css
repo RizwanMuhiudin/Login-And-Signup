@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-box {
+    width: 400px;
+    position: relative;
+    height: 350px;
+    background-color: #fff;
+    backdrop-filter: blur(100px);
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 10px 0px 50px #001833;
+    padding: 30px;
+    user-select: none;
+    margin: 0 10px;
+    color: #001833;
+}
+
+.form-box h2 {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    height: 100%;
+}
+
+.inner-form {
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-box {
+    border-bottom: 3px solid #001833;
+    position: relative;
+    height: 40px;
+    width: 90%;
+    margin: 15px 0;
+}
+
+.input-box input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background: none;
+    text-align: bottom;
+    font-size: 20px;
+    border: none;
+    color: #001833;
+    outline: none;
+}
+
+.input-box label {
+    font-size: 17px;
+    position: absolute;
+    top: 30%;
+    left: 2px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -20px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.submit-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.select-box {
+    width: 90%;
+}
+
+.submit {
+    width: 130px;
+    height: 35px;
+    border: 2px solid #0101b6;
+    background: none;
+    color: #fff;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #0101b6;
+}
+
+.submit:hover {
+    background-color: #fff;
+    border: 2px solid #0101b6;
+    color: #0101b6;
+}
+
+.error {
+    position: absolute;
+    color: red;
+    bottom: 0px;
+    margin-left: 20px;
+}
+
+@media(max-width:450px) {
+    .submit-box {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:400px) {
+    .select-row {
+        flex-direction: column;
+    }
+
+    .form-box {
+        height: 700px;
+    }
+}
